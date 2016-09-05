@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <form action="../Controller/MatchController.php?operation=cadastrar" method="post" name="cadUser">
+        <form action="/GeneralPHP/Controller/MatchController.php?operation=start" method="post" name="cadUser">
             <input type="text" name="Name" id="Name" placeholder="Nome do jogador"/><br>
             <input type="submit" name="btnJogar" id="btnJogar" placeholder="Jogar"/><br>
         </form>
