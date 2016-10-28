@@ -11,12 +11,14 @@
 
       <div class="site-wrapper-inner">
 
-        <div class="cover-container">
+        <div class="cover-container" style="width: 65%;">
 
-          <div class="masthead clearfix" style="position: relative;">
+          <div class="masthead clearfix" style="position: relative; width: 100%;">
             <?php 		
             		$fruits = array();
-            		//array_pop($_SESSION['jogadores']);
+            		if(count($_SESSION['jogadores']) > 1){
+            			array_pop($_SESSION['jogadores']);
+            		}
 			      	$fruits = $_SESSION['jogadores'];
 				  	foreach ($fruits as $key => $val) {	
 			?>
@@ -59,7 +61,16 @@
 			        <td><?php echo $game->playerName;?></td>
 			        <td><?php echo $game->game;?></td>
 			        <td><?php echo $game->palyerSummation;?></td>
-			        <td><?php echo $game->dice;?></td>		        				        
+			        <td>
+			        	<?php 
+			        		$pieces = explode(",", $game->dice);			        		
+			        	?>
+			        	<img src="../Include/assets/images/0<?php echo $pieces[0] ?>.png" />
+			        	<img src="../Include/assets/images/0<?php echo $pieces[1] ?>.png" />
+			        	<img src="../Include/assets/images/0<?php echo $pieces[2] ?>.png" />
+			        	<img src="../Include/assets/images/0<?php echo $pieces[3] ?>.png" />
+			        	<img src="../Include/assets/images/0<?php echo $pieces[4] ?>.png" />
+			        </td>		        				        
 			      </tr>
 			      <?php }?>
 			    </tbody>
