@@ -1,10 +1,12 @@
 <?php
     class MatchModel{
-        private $matchId;
+        private $id;
+    	private $matchId;
         private $playerName;
         private $game;
         private $playerSummation;
         private $winner;
+        private $dice;
 
         //Metodos magicos para atribuir/buscar propriedades
         public function __construct() {}

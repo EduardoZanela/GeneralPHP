@@ -1,6 +1,6 @@
 <?php
-	include 'header.php';
-    session_start();
+	session_start();
+	include 'header.php';  
 ?>
 
 <body>
@@ -15,7 +15,7 @@
             <div class="inner">
               	<h2>Olá <?php echo $_SESSION['playerName']; ?> você está jogando General</h2>
             </div>
-          </div>
+          </div>	
 			
           <div class="inner cover">
           <h5>Rodada: <?php echo $_SESSION['rodada']; ?></h5>
@@ -73,7 +73,12 @@
           		$dice = array();
           		$dice = $_SESSION['dice'];
           		foreach ($dice as $d){
-          			echo $d . " ";
+          			
+          	?>		
+          	
+          	<img src="../Include/assets/images/0<?php echo $d ?>.png" />
+          			
+          <?php			
           		}
           			
           	}         

@@ -9,8 +9,7 @@ class ConnectionDB extends PDO{
     public static function getInstance(){
         if(!isset(self::$instance)){
             try{
-                self::$instance = new ConnectionDB("mysql:dbname=general;host=localhost", "root", "");
-                echo 'Connectado ao banco';
+                self::$instance = new ConnectionDB("mysql:dbname=general;host=localhost", "root", "");                
             } catch (Exception $ex) {
                 echo 'Ocorreram falhas ao conectar';
                 echo "$ex";
